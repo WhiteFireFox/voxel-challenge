@@ -17,19 +17,19 @@ def makeup(end, num):
 @ti.kernel
 def initialize_voxels():
     for x in ti.ndrange((0, 42)):
-        if x % 14 == 0:
+        if x % 14 == 0 or x == 4:
             continue
         for i in range(-3, 4):
             for j in range(-3, 4):
                 scene.set_voxel(vec3(x, 56+i, j), 1, vec3(color))
     makeup(7, 59); makeup(6, 58); makeup(5, 57); makeup(4, 56); makeup(3, 55); makeup(2, 54)
-    for y in ti.ndrange((0, 56)):
-        if y % 14 == 0:
+    for y in ti.ndrange((0, 60)):
+        if y % 15 == 0 and y < 50:
             continue
         for i in range(-3, 4):
             for j in range(-3, 4):
                 scene.set_voxel(vec3(i, y, j), 1, vec3(color))
-    for z in ti.ndrange((-49, 1)):
+    for z in ti.ndrange((-49, 4)):
         if z == -34 or z == -19:
             continue
         for i in range(-3, 4):
