@@ -6,7 +6,7 @@ color = (0.6, 0.2, 0.2)
 
 scene = Scene(voxel_edges=0, exposure=10)
 scene.set_floor(-0.05, (1.0, 1.0, 1.0))
-scene.set_directional_light((-1, 0.3, -1), 0.1, (color))
+scene.set_directional_light((-1, 1, -1), 0.1, (0.5, 0.5, 0.5))
 
 @ti.func
 def makeup(end, num):
