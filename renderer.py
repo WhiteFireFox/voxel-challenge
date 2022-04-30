@@ -7,7 +7,6 @@ use_directional_light = True
 
 DIS_LIMIT = 100
 
-
 @ti.data_oriented
 class Renderer:
     def __init__(self, dx, image_res, up, voxel_edges, exposure=3):
